@@ -1059,6 +1059,8 @@
                   src="certificate of frontend.png"
                   alt="Frontend Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>Frontend Development</h4>
@@ -1080,6 +1082,8 @@
                   src="certificate of full stack.png"
                   alt="Full Stack Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>Full Stack Development</h4>
@@ -1101,6 +1105,8 @@
                   src="html css bootcamp.png"
                   alt="HTML CSS Bootcamp"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>HTML CSS Bootcamp</h4>
@@ -1122,6 +1128,8 @@
                   src="nxt wave build own static web.png"
                   alt="NxtWave Static Web"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>Build Own Static Website</h4>
@@ -1143,31 +1151,35 @@
           <div class="certificate-category">
             <h3><i class="fas fa-robot"></i> AI & Development Tools</h3>
             <div class="certificates-grid">
-                <div class="certificate-card">
-                    <img
-                      src="hp certificate.png"
-                      alt="HP Certificate"
-                      class="certificate-img"
-                    />
-                    <div class="certificate-content">
-                      <h4>HP Technology</h4>
-                      <p class="certificate-issuer">Hewlett Packard</p>
-                      <p class="certificate-description">
-                        Technology certification from HP covering enterprise-level
-                        solutions and best practices.
-                      </p>
-                      <div class="certificate-skills">
-                        <span class="skill-badge">Enterprise</span>
-                        <span class="skill-badge">Technology</span>
-                        <span class="skill-badge">Solutions</span>
-                      </div>
-                    </div>
+              <div class="certificate-card">
+                <img
+                  src="hp certificate.png"
+                  alt="HP Certificate"
+                  class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="certificate-content">
+                  <h4>HP Technology</h4>
+                  <p class="certificate-issuer">Hewlett Packard</p>
+                  <p class="certificate-description">
+                    Technology certification from HP covering enterprise-level
+                    solutions and best practices.
+                  </p>
+                  <div class="certificate-skills">
+                    <span class="skill-badge">Enterprise</span>
+                    <span class="skill-badge">Technology</span>
+                    <span class="skill-badge">Solutions</span>
                   </div>
+                </div>
+              </div>
               <div class="certificate-card">
                 <img
                   src="guvi certificate.png"
                   alt="ChatGPT AI Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>ChatGPT AI Mastery</h4>
@@ -1192,6 +1204,8 @@
                   src="certificate of copilot.png"
                   alt="GitHub Copilot Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>GitHub Copilot Fundamentals</h4>
@@ -1215,6 +1229,8 @@
                   src="github copilot certificate.png"
                   alt="GitHub Copilot Advanced Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>GitHub Copilot Advanced</h4>
@@ -1238,6 +1254,8 @@
                   src="cognitive certificate.png"
                   alt="Cognitive Computing Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>Cognitive Computing & AI</h4>
@@ -1268,6 +1286,8 @@
                   src="certificate of linkedin.png"
                   alt="LinkedIn Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>LinkedIn Learning</h4>
@@ -1289,6 +1309,8 @@
                   src="certificate of webinar.png"
                   alt="Webinar Certificate"
                   class="certificate-img"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="certificate-content">
                   <h4>Technical Webinar</h4>
@@ -1304,8 +1326,6 @@
                   </div>
                 </div>
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -1445,84 +1465,200 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Performance Optimized JavaScript -->
     <script>
-      // Mobile Navigation Toggle
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
+      // Performance optimizations for skills and certificates
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
 
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      });
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        });
 
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-link").forEach((n) =>
-        n.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
-        })
-      );
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll(".nav-link").forEach((n) =>
+          n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+          })
+        );
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Active navigation link highlighting
+        window.addEventListener("scroll", () => {
+          let current = "";
+          const sections = document.querySelectorAll("section");
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - 200) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        });
+
+        // Form submission (placeholder)
+        document.querySelector("form").addEventListener("submit", function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+          alert("Thank you for your message! This is a demo form.");
+        });
+
+        // Lazy loading for certificate images
+        const certificateImages = document.querySelectorAll(".certificate-img");
+        const imageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute("data-src");
+                  observer.unobserve(img);
+                }
+              }
             });
+          },
+          {
+            rootMargin: "50px 0px",
+            threshold: 0.1,
+          }
+        );
+
+        certificateImages.forEach((img) => {
+          if (img.dataset.src) {
+            imageObserver.observe(img);
           }
         });
-      });
 
-      // Active navigation link highlighting
-      window.addEventListener("scroll", () => {
-        let current = "";
-        const sections = document.querySelectorAll("section");
+        // Optimized skill progress animations
+        const skillItems = document.querySelectorAll(".skill-item");
+        const skillObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const skillItem = entry.target;
+                const progressBar = skillItem.querySelector(".skill-progress");
+                const level = skillItem.dataset.level;
 
+                if (progressBar && level) {
+                  // Use requestAnimationFrame for smooth animation
+                  requestAnimationFrame(() => {
+                    progressBar.style.width = level + "%";
+                  });
+                }
+
+                skillObserver.unobserve(skillItem);
+              }
+            });
+          },
+          {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        skillItems.forEach((item) => {
+          skillObserver.observe(item);
+        });
+
+        // Simple section animations - removed complex intersection observer
+        const sections = document.querySelectorAll(
+          ".skill-category, .certificate-card"
+        );
+
+        // Make all sections visible by default
         sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute("id");
-          }
+          section.classList.add("animate");
         });
 
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
+        // Preload critical images
+        const criticalImages = [
+          "certificate of frontend.png",
+          "certificate of full stack.png",
+          "html css bootcamp.png",
+        ];
+
+        criticalImages.forEach((src) => {
+          const link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = src;
+          document.head.appendChild(link);
         });
-      });
 
-      // Form submission (placeholder)
-      document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("Your response uploaded successfully. Thankyou!, i will approach you soon....");
-      });
+        // Optimize scroll performance
+        let ticking = false;
+        function updateScroll() {
+          ticking = false;
+        }
 
-      // Intersection Observer for animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(updateScroll);
+            ticking = true;
           }
-        });
-      }, observerOptions);
+        }
 
-      // Observe all sections for animations
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
+        window.addEventListener("scroll", requestTick, { passive: true });
+
+        // Reduce layout thrashing
+        const skillBars = document.querySelectorAll(".skill-bar");
+        skillBars.forEach((bar) => {
+          bar.style.contain = "layout style";
+        });
+
+        // Optimize certificate grid layout
+        const certificateGrids =
+          document.querySelectorAll(".certificates-grid");
+        certificateGrids.forEach((grid) => {
+          grid.style.contain = "layout style";
+        });
+
+        // Performance monitoring (optional)
+        if ("performance" in window) {
+          window.addEventListener("load", () => {
+            const perfData = performance.getEntriesByType("navigation")[0];
+            console.log(
+              "Page load time:",
+              perfData.loadEventEnd - perfData.loadEventStart,
+              "ms"
+            );
+          });
+        }
       });
+
+      // Optimized mobile performance
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").catch(() => {
+            // Service worker registration failed
+          });
+        });
+      }
     </script>
   </body>
 </html>
