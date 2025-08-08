@@ -14,7 +14,52 @@ body {
     sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Animated background graphics */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(120, 219, 255, 0.2) 0%,
+      transparent 50%
+    );
+  z-index: -1;
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-10px, -10px) scale(1.05);
+  }
+  50% {
+    transform: translate(10px, -5px) scale(1.02);
+  }
+  75% {
+    transform: translate(-5px, 10px) scale(1.03);
+  }
 }
 
 .container {
@@ -191,8 +236,23 @@ h6 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
   padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.6;
+  z-index: -1;
 }
 
 .hero-container {
@@ -283,7 +343,22 @@ h6 {
 /* About Section */
 .about {
   padding: 100px 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.03'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 8l8-8h2L40 12v-8zm0 12L52 0h2L40 16v-4zm0 16L64 0h2L40 32v-8zm0 20L76 0h2L40 52v-12zm0 24L88 0h2L40 76v-24zm0 4L92 0h2L40 80v-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .about-content {
@@ -595,7 +670,22 @@ h6 {
 /* Skills Section */
 .skills {
   padding: 100px 0;
-  background: #f7fafc;
+  background: rgba(247, 250, 252, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.04'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 12c2.19 0 4-1.81 4-4s-1.81-4-4-4-4 1.81-4 4 1.81 4 4 4zm-28-48c2.19 0 4-1.81 4-4s-1.81-4-4-4-4 1.81-4 4 1.81 4 4 4zm-5 36c2.19 0 4-1.81 4-4s-1.81-4-4-4-4 1.81-4 4 1.81 4 4 4zm32-29c2.19 0 4-1.81 4-4s-1.81-4-4-4-4 1.81-4 4 1.81 4 4 4zm4-5c2.19 0 4-1.81 4-4s-1.81-4-4-4-4 1.81-4 4 1.81 4 4 4zm-25 15c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-5-15c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: -1;
 }
 
 /* Skills Overview Stats */
@@ -686,13 +776,15 @@ h6 {
   justify-content: center;
   text-align: center;
   padding: 1.5rem 1rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
   transition: all 0.3s ease;
   min-height: 120px;
   width: 100%;
   max-width: 140px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .skill-item:hover {
@@ -715,15 +807,17 @@ h6 {
 
 /* Skill category styling with auto width and height */
 .skill-category {
-  background: #ffffff;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
   transition: all 0.3s ease;
   width: auto;
   height: auto;
   min-height: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .skill-category:hover {
@@ -756,12 +850,14 @@ h6 {
 
 /* Learning Roadmap - Mobile First Design */
 .learning-roadmap {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
   padding: 2rem 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
   margin: 0 auto;
   max-width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Desktop styles for horizontal layout */
@@ -1047,7 +1143,22 @@ h6 {
 /* Projects Section */
 .projects {
   padding: 100px 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.03'%3E%3Cpath d='M60 0L120 60L60 120L0 60L60 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .projects-grid {
@@ -1057,11 +1168,13 @@ h6 {
 }
 
 .project-card {
-  background: white;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-card:hover {
@@ -1135,7 +1248,22 @@ h6 {
 /* Education Section */
 .education {
   padding: 100px 0;
-  background: #f7fafc;
+  background: rgba(247, 250, 252, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.04'%3E%3Cpath d='M70 0L140 70L70 140L0 70L70 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .education-content {
@@ -1147,11 +1275,13 @@ h6 {
 .education-item {
   display: flex;
   gap: 2rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
   transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .education-item:hover {
@@ -1248,7 +1378,22 @@ h6 {
 /* Certificates Section */
 .certificates {
   padding: 100px 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificates::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.03'%3E%3Cpath d='M80 0L160 80L80 160L0 80L80 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .certificates-categories {
@@ -1279,13 +1424,15 @@ h6 {
 }
 
 .certificate-card {
-  background: white;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .certificate-card:hover {
@@ -1388,7 +1535,22 @@ h6 {
 /* Contact Section */
 .contact {
   padding: 100px 0;
-  background: #f7fafc;
+  background: rgba(247, 250, 252, 0.95);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.04'%3E%3Cpath d='M90 0L180 90L90 180L0 90L90 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .contact-content {
@@ -1438,10 +1600,12 @@ h6 {
 }
 
 .contact-form {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-group {
@@ -1466,9 +1630,24 @@ h6 {
 
 /* Footer */
 .footer {
-  background: #2d3748;
+  background: rgba(45, 55, 72, 0.95);
+  backdrop-filter: blur(20px);
   color: white;
   padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M100 0L200 100L100 200L0 100L100 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .footer-content {
@@ -1515,6 +1694,54 @@ section {
 section.animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Floating animation for cards */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill-category,
+.project-card,
+.certificate-card,
+.education-item,
+.learning-roadmap {
+  animation: float 6s ease-in-out infinite;
+}
+
+.skill-category:nth-child(2),
+.project-card:nth-child(2),
+.certificate-card:nth-child(2),
+.education-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.skill-category:nth-child(3),
+.project-card:nth-child(3),
+.certificate-card:nth-child(3),
+.education-item:nth-child(3) {
+  animation-delay: 2s;
+}
+
+/* Pulse animation for skill items */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.skill-item:hover {
+  animation: pulse 0.6s ease-in-out;
 }
 
 /* Responsive Design */
