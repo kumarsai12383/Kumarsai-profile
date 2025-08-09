@@ -61,11 +61,65 @@ body::before {
     transform: translate(-5px, 10px) scale(1.03);
   }
 }
+.skills {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.space{
+  margin: 0 10px;
+}
+.html { 
+  color: #e44d26; }
+.css { color: #264de4; }
+.js { color: #f0db4f; }
+.react { color: #61dafb; }
+.node { color: #3c873a; }
+.mongo { color: #4db33d; }
+.ai { color: #ff6f00; }
+.chatgpt { color: #00a67d; }
+.copilot { color: #00bfff; }
+.gemini { color: #1e88e5; }
+.claude { color: #ff5722; }
+.git { color: #f34f29; }
+.netlify { color: #00ad9f;}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+.profile-banner {
+background: linear-gradient(135deg, #d7ddf9 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+ margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.banner-text{
+  margin-left: auto;
+}
+.banner-text h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.banner-text p {
+  margin: 5px 0;
+}
+
+.banner-text span {
+  color: #f39c12; /* Highlight color for skills */
 }
 
 /* Typography */
@@ -796,6 +850,7 @@ h6 {
   font-size: 2.5rem;
   margin-bottom: 0.8rem;
   display: block;
+  text-align: center;
 }
 
 .skill-item span {
