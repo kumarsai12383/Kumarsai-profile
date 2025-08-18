@@ -172,9 +172,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content {
-  text-align: center;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.hero-text {
+  text-align: left;
 }
 
 .hero-name {
@@ -195,16 +202,32 @@ h1, h2, h3, h4, h5, h6 {
   color: #718096;
   margin-bottom: 2.5rem;
   line-height: 1.7;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
 /* About Section */
@@ -818,6 +841,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
   }
 
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+    order: 2;
+  }
+  
+  .hero-image {
+    order: 1;
+  }
+
   .hero-name {
     font-size: 2.5rem;
   }
@@ -831,8 +869,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-buttons {
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .profile-img {
+    max-width: 300px;
+    height: 300px;
   }
 
   .skills-grid {
@@ -905,6 +949,11 @@ h1, h2, h3, h4, h5, h6 {
   .ai-tool-item {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .profile-img {
+    max-width: 250px;
+    height: 250px;
   }
 }
 
