@@ -13,6 +13,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <link
       rel="icon"
       type="image/x-icon"
@@ -21,25 +24,23 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <span class="logo-text">Kumar Sai</span>
-        </div>
-        <div class="nav-menu" id="nav-menu">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#certificates" class="nav-link">Certificates</a>
-          <a href="#tools" class="nav-link">Tools</a>
-          <a href="#ai-tools" class="nav-link">AI Tools</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+      <div class="container mb-0">
+        <a class="navbar-brand logo-text" href="#home" style="font-size: 1.5rem; font-weight: 700; color: #667eea;"><img src="profile.png" class="brand-icon" alt="" width="35px" height="35px" style="border-radius: 50px " >Kumar Sai</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenuBootstrap" aria-controls="navMenuBootstrap" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenuBootstrap">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#certificates">Certificates</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#tools">Tools</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#ai-tools">AI Tools</a></li>
+            <li class="nav-item"><a style="font-size: 1.0rem; font-weight: 700; color: #1f284d;" class="nav-link" href="#contact">Contact</a></li>
+ </ul>
         </div>
       </div>
     </nav>
@@ -59,11 +60,11 @@
               intuitive user experiences
             </p>
             <div class="hero-buttons">
-              <a href="resume.pdf" class="btn btn-primary" target="_blank">
+              <a href="resume.pdf" class="btn-buttons btn-resume" target="_blank">
                 <i class="fas fa-download"></i>
                 View Resume
               </a>
-              <a href="#contact" class="btn btn-secondary">
+              <a href="#contact" class="btn-buttons btn-contact">
                 <i class="fas fa-envelope"></i>
                 Contact Me
               </a>
@@ -198,7 +199,7 @@
             <i class="fab fa-css3-alt" style="color: #264de4"></i>
             <span>CSS</span>
           </div>
-           <div class="skill-item">
+          <div class="skill-item">
             <i class="fab fa-bootstrap" style="color: #563d7c"></i>
             <span>Bootstrap</span>
           </div>
@@ -222,10 +223,14 @@
             <i class="fas fa-database" style="color: #47a248"></i>
             <span>MongoDB</span>
           </div>
-          <div class="skill-item">
+            <div class="skill-item">
             <i class="fab fa-git-alt" style="color: #f05032"></i>
-            <span>Git/GitHub</span>
+            <span>Git</span>
           </div>
+          <div class="skill-item">
+            <i class="fab fa-github" style="color: #181717"></i>
+            <span>GitHub</span>
+            </div>
         </div>
       </div>
     </section>
@@ -304,7 +309,7 @@
         <div class="projects-link">
           <a
             href="https://github.com/kumarsai12383"
-            class="btn btn-primary"
+            class="btn-buttons btn-resume"
             target="_blank"
           >
             <i class="fab fa-github"></i>
@@ -314,10 +319,50 @@
       </div>
     </section>
 
-    <!-- Certificates Section -->
+    <!-- Professional Certificates Section -->
+    <section id="certificates " class="certificates d-none">
+      <div class="container">
+        <h2 class="section-title">Professional Certificates</h2>
+        <div class="certificates-grid">
+          <!-- Certificate 1 -->
+          <div class="certificate-card d-sm-none">
+            <div class="certificate-image">
+              <img
+                src="hp certificate.png"
+                alt="HP Technology Certificate"
+                class="certificate-img"
+              />
+              <div class="certificate-overlay">
+                <div class="certificate-badge">
+                  <i class="fas fa-certificate"></i>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">HP Technology</h3>
+              <p class="certificate-issuer">Hewlett Packard</p>
+              <p class="certificate-description">
+                Enterprise technology solutions and modern computing
+                infrastructure fundamentals.
+              </p>
+              <div class="certificate-skills">
+                <span class="skill-tag">Enterprise</span>
+                <span class="skill-tag">Technology</span>
+                <span class="skill-tag">Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Completion Certificates Section -->
     <section id="certificates" class="certificates">
       <div class="container">
-        <h2 class="section-title">Certificates & Achievements</h2>
+        <h2 class="section-title">Course completion Certificates</h2>
         <div class="certificates-grid">
           <!-- Certificate 1 -->
           <div class="certificate-card">
@@ -493,13 +538,48 @@
           </div>
         </div>
         <div class="certificates-link">
-          <a href="https://drive.google.com/drive/folders/1gznjQMxwRnAoZj1eTDzxH0plmZR_0qyM?usp=sharing" target="_blank" class="btn btn-primary">
+          <a href="https://drive.google.com/drive/folders/1gznjQMxwRnAoZj1eTDzxH0plmZR_0qyM?usp=sharing" target="_blank" class="btn-buttons btn-resume">
             <i class="fas fa-award"></i>
             View All Certificates
           </a>
-            
         </div>
       </div>
+    </section>
+
+    <section id="certificates" class="certificates d-none">
+      <div class="container">
+        <h2 class="section-title">Intrenship Certificates & Achievements</h2>
+        <div class="certificates-grid">
+          <!-- Certificate 1 -->
+          <div class="certificate-card d-none">
+            <div class="certificate-image">
+              <img
+                src="hp certificate.png"
+                alt="HP Technology Certificate"
+                class="certificate-img"
+              />
+              <div class="certificate-overlay">
+                <div class="certificate-badge">
+                  <i class="fas fa-certificate"></i>
+                </div>
+              </div>
+            </div>
+            <div class="certificate-content">
+              <h3 class="certificate-title">HP Technology</h3>
+              <p class="certificate-issuer">Hewlett Packard</p>
+              <p class="certificate-description">
+                Enterprise technology solutions and modern computing
+                infrastructure fundamentals.
+              </p>
+              <div class="certificate-skills">
+                <span class="skill-tag">Enterprise</span>
+                <span class="skill-tag">Technology</span>
+                <span class="skill-tag">Solutions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
     </section>
 
     <!-- Tools & Deployment Section -->
@@ -712,7 +792,7 @@
             <div class="ai-tool-content">
               <h3>GitHub Copilot</h3>
               <p>
-                My AI pair programmer for intelligent code completion,
+                My go-to AI pair programmer for intelligent code completion,
                 function generation, and accelerating development workflow in VS
                 Code
               </p>
@@ -818,7 +898,7 @@
           <div class="contact-actions">
             <a
               href="mailto:kumarsai05072005@gmail.com"
-              class="btn btn-secondary"
+              class="btn-buttons btn-resume"
             >
               <i class="fas fa-envelope"></i>
               Send Email
@@ -826,12 +906,19 @@
           </div>
         </div>
       </div>
+      <div class="container ">
+        <div class="button-top d-flex justify-content-end mb-4">
+          <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="btn-buttons btn-width btn-resume"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+</svg>Back to Top</button>
+        </div>
+        </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
+        <div class="footer-content text-center">
           <p>&copy; 2024 Kumar Sai. All rights reserved.</p>
           <div class="footer-social">
             <a
