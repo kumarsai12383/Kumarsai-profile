@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Buttons */
-.btn {
+.btn-buttons {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -64,24 +64,24 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
-.btn-primary {
+.btn-resume {
   background: #667eea;
   color: white;
 }
 
-.btn-primary:hover {
+.btn-resume:hover {
   background: #5a67d8;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
-.btn-secondary {
+.btn-contact {
   background: transparent;
   color: #667eea;
   border: 2px solid #667eea;
 }
 
-.btn-secondary:hover {
+.btn-contact:hover {
   background: #667eea;
   color: white;
   transform: translateY(-2px);
@@ -113,7 +113,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #667eea;
 }
-
+.brand-icon {
+  border-radius: 20px;
+  margin-right: 10px;
+}
 .nav-menu {
   display: flex;
   gap: 2rem;
@@ -122,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
   text-decoration: none;
   color: #4a5568;
-  font-weight: 500;
+  font-weight: 800;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -878,17 +881,22 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   flex-wrap: wrap;
 }
-
+/*btn-backto-top*/
+.button-width {
+  margin-bottom: 20px;
+  width: 50px;
+}
 /* Footer */
 .footer {
-  background: #2d3748;
+  background:#667eea;
   color: white;
   padding: 2rem 0;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -900,17 +908,17 @@ h1, h2, h3, h4, h5, h6 {
 .footer-social a {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background:#fafafc;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color:#667eea;
   transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
-  background: #667eea;
+  background: #f4f4f5;
   transform: translateY(-2px);
 }
 
