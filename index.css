@@ -28,6 +28,37 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   color: #2d3748;
 }
+.working-on-projects {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #718096;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  
+  width:fit-content;
+  margin-right: auto;
+  
+  padding: 10px 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #667eea;
+  animation: glow-border 1.5s infinite alternate;
+}
+
+@keyframes glow-border {
+  0% {
+    box-shadow: 0 0 0 0 #667eea;
+  }
+  100% {
+    box-shadow: 0 0 10px 4px #667eea;
+  }
+}
+
+.project-name{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #667eea;
+}
 
 .section-title {
   font-size: 2.5rem;
@@ -945,7 +976,11 @@ h1, h2, h3, h4, h5, h6 {
   .hamburger {
     display: flex;
   }
-
+  .working-on-projects{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
